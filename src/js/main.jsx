@@ -12,20 +12,30 @@ import '../styles/index.css';
 import SimpleCounter from './components/SimpleCounter';
 
 let Counter = 0;
+let one = 0;
+let two = 0;
+let three = 0;
+let four = 0;
+
 setInterval(function () {
-  const four = Math.floor(Counter / 1000);
-  const three = Math.floor(Counter / 100);
-  const two = Math.floor(Counter / 10);
-  const one = Math.floor(Counter / 1);
-  console.log('one:', one, 'two:', two, 'three:', three, 'four:', four);
+  four = Math.floor(Counter / 1000);
+  three = Math.floor(Counter / 100);
+  two = Math.floor(Counter / 10);
+  one = Math.floor(Counter / 1);
+
+  one = one % 10;
+  two = two % 10;
+  three = three % 10;
+  four = four % 10;
+
   Counter++;
 }, 1000);
-
+console.log('outerOne', one);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <SimpleCounter
       digitOne={one}
-      digittwo={two}
+      digitTwo={two}
       digitThree={three}
       digitFour={four}
     />
