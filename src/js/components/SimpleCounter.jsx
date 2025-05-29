@@ -1,18 +1,25 @@
 import React from 'react';
 import { FaRegClock } from 'react-icons/fa6';
 
-const SimpleCounter = (props) => {
+const SimpleCounter = ({ digitFour, digitThree, digitTwo, digitOne }) => {
   return (
     <div className="bg-dark text-white counter-wrapper d-flex align-items-center justify-content-center p-2">
       <div className="cal-icon">
         <FaRegClock />
       </div>
-      <div className="digit-4 p-1">{props.digitFour}</div>
-      <div className="digit-3 p-1">{props.digitThree}</div>
-      <div className="digit-2 p-1">{props.digitTwo}</div>
-      <div className="digit-1 p-1">{props.digitOne}</div>
+      <div className="digit-4 p-1">{digitFour}</div>
+      <div className="digit-3 p-1">{digitThree}</div>
+      <div className="digit-2 p-1">{digitTwo}</div>
+      <div className="digit-1 p-1">{digitOne}</div>
     </div>
   );
 };
+
+// SimpleCounter.propTypes = {
+//   digitOne: React.PropTypes.number,
+//   digitTwo: React.PropTypes.number,
+//   digitThree: React.PropTypes.number,
+//   digitFour: React.PropTypes.number,
+// };
 
 export default SimpleCounter;
