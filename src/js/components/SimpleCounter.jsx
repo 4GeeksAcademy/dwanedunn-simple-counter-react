@@ -7,10 +7,18 @@ const SimpleCounter = ({ digitFour, digitThree, digitTwo, digitOne }) => {
       <div className="cal-icon">
         <FaRegClock />
       </div>
-      <div className="digit-4 p-1">{digitFour}</div>
-      <div className="digit-3 p-1">{digitThree}</div>
-      <div className="digit-2 p-1">{digitTwo}</div>
-      <div className="digit-1 p-1">{digitOne}</div>
+      <div className="digit-4 p-1 border border-1 border-secondary-subtle rounded">
+        {digitFour}
+      </div>
+      <div className="digit-3 p-1 border border-1 border-secondary-subtle rounded">
+        {digitThree}
+      </div>
+      <div className="digit-2 p-1 border border-1 border-secondary-subtle rounded">
+        {digitTwo}
+      </div>
+      <div className="digit-1 p-1 border border-1 border-secondary-subtle rounded">
+        {digitOne}
+      </div>
     </div>
   );
 };
